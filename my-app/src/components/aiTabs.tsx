@@ -4,12 +4,12 @@ import "./../App.css";
 interface AiTabsProps {}
 
 const AiTabs: React.FC<AiTabsProps> = () => {
-  const [activeTab, setActiveTab] = useState<string>("London");
+  const [activeTab, setActiveTab] = useState<string>("AI Applications");
 
   const tabs = [
-    { name: "London", content: "London is the capital city of England." },
-    { name: "Paris", content: "Paris is the capital of France." },
-    { name: "Tokyo", content: "Tokyo is the capital of Japan." },
+    { name: "AI Applications", content: "Ready-to-use enterprise AI applications for high-value use cases." , img: "/images/ai-platform.png"},
+    { name: "Development Tools", content: "An integrated family of deep code, low code, and no code development tools available in a collaborative multi-functional environment." , img: "/images/3d-code-icon-and-gear-cogwheel-png.webp"},
+    { name: "AI Platform", content: "The C3 AI Platform provides all necessary software services in one integrated suite to rapidly develop, provision, and operate Enterprise AI applications." , img: "/images/ai-plat.webp"},
   ];
 
   return (
@@ -32,8 +32,16 @@ const AiTabs: React.FC<AiTabsProps> = () => {
           className="tabcontent"
           style={{ display: activeTab === tab.name ? "block" : "none" }}
         >
-          <h3>{tab.name}</h3>
-          <p>{tab.content}</p>
+          <div className="tab-row">
+            <div className="img-wrapper">
+              <img src={tab.img} alt="" />
+            </div>
+            <div>
+            <h3>{tab.name}</h3>
+            <p>{tab.content}</p>
+            </div>
+          </div>
+          
         </div>
       ))}
 

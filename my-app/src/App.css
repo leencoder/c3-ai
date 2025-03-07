@@ -274,3 +274,14 @@ header:hover .header-menu .logo {
 .ai-tabs .tab button.tablinks {
   width: 250px;
 }
+.ai-tabs .tab-row {
+  display: flex;
+}
+.ai-tabs .tab-row>div {
+  width: 50%;
+}
+.ai-tabs .tab-row  .img-wrapper img {
+  object-fit: contain;
+  height:100%;
+  width: 100%;
+}
